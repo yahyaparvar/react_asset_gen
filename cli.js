@@ -78,26 +78,26 @@ fs.access(assetsDirPath, fs.constants.F_OK, (err) => {
       .join(", ")}}`;
   };
 
-  // Generate the final content for react_gen.js
+  // Generate the final content for react_asset_gen.js
   const content = `${imports.join(
     "\n"
   )}\n\nexport const IMAGES = ${buildExportsObject(exports)};\n`;
 
-  // Define the path for the react_gen.js file inside the assets directory
-  const reactGenFilePath = path.join(assetsDirPath, "react_gen.js");
+  // Define the path for the react_asset_gen.js file inside the assets directory
+  const reactGenFilePath = path.join(assetsDirPath, "react_asset_gen.js");
 
-  // Check if react_gen.js exists and remove it before writing a new one
+  // Check if react_asset_gen.js exists and remove it before writing a new one
   if (fs.existsSync(reactGenFilePath)) {
     fs.unlinkSync(reactGenFilePath);
-    console.log("Existing react_gen.js file removed.");
+    console.log("Existing react_asset_gen.js file removed.");
   }
 
-  // Write the generated content to the react_gen.js file
+  // Write the generated content to the react_asset_gen.js file
   fs.writeFile(reactGenFilePath, content, (err) => {
     if (err) {
       console.error("Error writing file:", err);
       return;
     }
-    console.log("react_gen.js has been written successfully with image paths.");
+    console.log("react_asset_gen.js has been written successfully with image paths.");
   });
 });

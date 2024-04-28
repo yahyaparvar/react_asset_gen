@@ -1,1 +1,1 @@
-# react_gen
+# react_asset_gen
