@@ -15,5 +15,8 @@
     "react_gen": "./cli.js"
   },
   "author": "Yahya Parvar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }
