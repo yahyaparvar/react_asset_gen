@@ -1,22 +1,32 @@
 {
   "name": "react_asset_gen",
   "version": "1.0.1",
-  "description": "react asset file generation",
+  "description": "CLI tool for asset generation in ReactJS 🚀",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "react_asset_gen": "node generate_file.js",
-    "init": ""
+    "start": "node cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "WDS"
+    "react",
+    "assets",
+    "images",
+    "auto-generation",
+    "cli"
   ],
   "bin": {
     "react_asset_gen": "./cli.js"
   },
   "author": "Yahya Parvar",
   "license": "MIT",
-  "devDependencies": {
-    "prettier": "^3.2.5"
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahyaparvar/react_asset_gen.git"
+  },
+  "homepage": "https://github.com/yahyaparvar/react_asset_gen#readme",
+  "bugs": {
+    "url": "https://github.com/yahyaparvar/react_asset_gen/issues"
   }
 }
