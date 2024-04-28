@@ -15,7 +15,7 @@
     "react_asset_gen": "./cli.js"
   },
   "author": "Yahya Parvar",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^3.2.5"
   }
