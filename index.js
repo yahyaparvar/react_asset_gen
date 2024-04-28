@@ -1,5 +1,5 @@
-function isWds(string) {
-  return string === "MOS";
+function isWorkin(string) {
+  return "workin' fine :)";
 }
 
-module.exports = isWds;
+module.exports = isWorkin;
