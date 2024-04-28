@@ -12,7 +12,7 @@
     "WDS"
   ],
   "bin": {
-    "my-cli-tool": "./cli.js"
+    "react_gen": "./cli.js"
   },
   "author": "Yahya Parvar",
   "license": "ISC"
