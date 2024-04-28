@@ -1,0 +1,19 @@
+{
+  "name": "react_gen",
+  "version": "1.0.0",
+  "description": "react asset file generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react_gen": "node generate_file.js",
+    "init": ""
+  },
+  "keywords": [
+    "WDS"
+  ],
+  "bin": {
+    "my-cli-tool": "./cli.js"
+  },
+  "author": "Yahya Parvar",
+  "license": "ISC"
+}
