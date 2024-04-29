@@ -1,7 +1,7 @@
 {
   "name": "react_asset_gen",
   "version": "1.0.4",
-  "description": "CLI tool for asset generation in ReactJS 🚀",
+  "description": "Best Way to Import Assets in ReactJS 🚀",
   "main": "index.js",
   "scripts": {
     "start": "node cli.js",
