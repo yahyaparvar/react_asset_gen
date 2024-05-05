@@ -1,6 +1,6 @@
 {
   "name": "react_asset_gen",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Best Way to Import Assets in ReactJS 🚀",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,6 @@
   "author": "Yahya Parvar",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/yahyaparvar/react_asset_gen.git"

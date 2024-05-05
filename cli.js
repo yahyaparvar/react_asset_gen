@@ -27,11 +27,14 @@ const assetsDirPath = path.join(process.cwd(), "src", "assets");
 // Check if the assets directory exists
 fs.access(assetsDirPath, fs.constants.F_OK, (err) => {
   if (err) {
-    console.error("\x1b[31m%s\x1b[0m", `-----------------------------------
+    console.error(
+      "\x1b[31m%s\x1b[0m",
+      `-----------------------------------
 ❌ ERROR: Assets folder not found.
   ➤ Expected location: 'src/assets'
   ➤ Please ensure the folder structure is correct.
------------------------------------`);
+-----------------------------------`
+    );
     return;
   }
 
@@ -43,10 +46,13 @@ fs.access(assetsDirPath, fs.constants.F_OK, (err) => {
   );
 
   if (imageFiles.length === 0) {
-    console.error("\x1b[31m%s\x1b[0m", `-----------------------------------
+    console.error(
+      "\x1b[31m%s\x1b[0m",
+      `-----------------------------------
 ❌ No valid image files found.
   ➤ Valid extensions: '.png', '.jpg', '.jpeg', '.gif', '.svg'
------------------------------------`);
+-----------------------------------`
+    );
     return;
   }
 
@@ -55,9 +61,7 @@ fs.access(assetsDirPath, fs.constants.F_OK, (err) => {
   const exports = [];
   imageFiles.forEach((file) => {
     const relativePath = path.relative(assetsDirPath, file);
-    const importName =
-      path.basename(file, path.extname(file)) +
-      relativePath.replace(/[^a-zA-Z0-9]/g, "_");
+    const importName = path.basename(file, path.extname(file));
     imports.push(`import ${importName} from './${relativePath}';`);
     const dirs = relativePath.split(path.sep);
     dirs.pop(); // Remove the file name
@@ -94,22 +98,31 @@ fs.access(assetsDirPath, fs.constants.F_OK, (err) => {
   // Check if react_asset_gen.js exists and remove it before writing a new one
   if (fs.existsSync(reactGenFilePath)) {
     fs.unlinkSync(reactGenFilePath);
-    console.log("\x1b[36m%s\x1b[0m", "🔄 Existing react_asset_gen.js file removed. Updating...\n");
+    console.log(
+      "\x1b[36m%s\x1b[0m",
+      "🔄 Existing react_asset_gen.js file removed. Updating...\n"
+    );
   }
 
   // Write the generated content to the react_asset_gen.js file
   fs.writeFile(reactGenFilePath, content, (err) => {
     if (err) {
-      console.error("\x1b[31m%s\x1b[0m", `-----------------------------------
+      console.error(
+        "\x1b[31m%s\x1b[0m",
+        `-----------------------------------
 ❌ ERROR: Unable to write file:
   ➤ ${err}
------------------------------------`);
+-----------------------------------`
+      );
       return;
     }
-    console.log("\x1b[32m%s\x1b[0m", `-----------------------------------
+    console.log(
+      "\x1b[32m%s\x1b[0m",
+      `-----------------------------------
 ✅ 💃 SUCCESS: react_asset_gen.js has been created successfully!
   ➤ Path: src/assets/react_asset_gen.js
   ➤ All image paths have been processed and are now accessible.
------------------------------------`);
+-----------------------------------`
+    );
   });
 });

@@ -1,9 +1,13 @@
 # react_asset_gen
+
+### Inspired by <a href="https://pub.dev/packages/flutter_gen">`flutter_gen`</a>
+
 ```jsx
 import { IMAGES } from "../assets/react_asset_gen";
 
-  return <img src={IMAGES.example_svg} alt="Example" />;
+return <img src={IMAGES.example_svg} alt="Example" />;
 ```
+
 `react_asset_gen` is a command-line interface (CLI) tool designed to streamline the process of managing and importing static image assets in React projects. It automatically scans your `src/assets` folder, identifies all image files, and generates a JavaScript module that exports these images in an easily accessible object format.
 
 ## Table of Contents
